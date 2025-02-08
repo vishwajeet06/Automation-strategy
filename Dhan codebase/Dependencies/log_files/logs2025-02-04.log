@@ -1,0 +1,7 @@
+INFO:2025-02-04 09:53:11,387:MainThread:Dhan.py  started system
+INFO:2025-02-04 09:53:11,387:MainThread:STARTED THE PROGRAM
+ERROR:2025-02-04 09:53:26,204:MainThread:Error processing GMRINFRA: No expiry date found for GMRINFRA
+Traceback (most recent call last):
+  File "C:\Users\vishw\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Dhan_Tradehull\Dhan_Tradehull.py", line 129, in correct_step_df_creation
+    raise ValueError(f"No expiry date found for {name}")
+ValueError: No expiry date found for GMRINFRA
