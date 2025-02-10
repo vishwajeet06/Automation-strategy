@@ -1,0 +1,68 @@
+neofetch >console memory uses
+
+Tmux Guide: How to Use Tmux in Your VM
+Tmux is a terminal multiplexer that allows you to manage multiple terminal sessions in a single window.
+
+1️⃣ Install Tmux (If Not Installed)
+
+sudo apt install tmux -y
+2️⃣ Start Tmux
+
+tmux
+You'll see a new terminal session with a green status bar at the bottom.
+
+3️⃣ Tmux Basic Commands
+Splitting Windows
+Split Vertically: CTRL + B then %
+Split Horizontally: CTRL + B then "
+Switching Between Panes
+Move Between Panes: CTRL + B then Arrow Keys
+Resize Panes: CTRL + B then Hold CTRL + Arrow Keys
+Creating and Switching Between Windows (Tabs)
+New Window: CTRL + B then C
+List Windows: CTRL + B then W
+Switch Window: CTRL + B then N (Next) or P (Previous)
+
+4️⃣ Detach & Reattach Sessions
+Tmux lets you detach and reattach sessions, which is useful when running long scripts.
+
+Detach from Tmux (Keep it Running)
+
+CTRL + B then D
+List Active Sessions
+
+tmux ls
+Reattach to an Existing Session
+
+tmux attach-session -t 0
+(If multiple sessions exist, replace 0 with the session ID)
+
+5️⃣ Kill a Tmux Session
+Kill Current Session: CTRL + B then X
+Kill a Specific Session:
+
+tmux kill-session -t 0
+Kill All Sessions:
+
+tmux kill-server
+6️⃣ Customize Tmux (Optional)
+To make Tmux more colorful, edit your config file:
+
+
+nano ~/.tmux.conf
+Add these lines for better visuals:
+
+
+set -g mouse on  # Enable mouse support
+set -g history-limit 10000  # Increase scrollback history
+set -g status-bg colour235  # Change status bar color
+Save & exit (CTRL + X, then Y, then Enter), then reload Tmux:
+
+
+tmux source-file ~/.tmux.conf
+🎯 Why Use Tmux?
+✅ Run multiple terminal windows in one session
+✅ Keep processes running even after disconnecting
+✅ Easily switch between split screens
+
+Now you can use Tmux like a pro in your VM! 🚀
